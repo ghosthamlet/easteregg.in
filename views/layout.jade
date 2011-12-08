@@ -105,11 +105,11 @@ html(class='no-js', lang='en')
     script(defer, src='/js/libs/beautify.min.js')
 
     - if (cacheBusting)
-      script(defer, src='/js/mylibs/easteregg.in.js?v=#{timestamp}')
+      script(src='/js/mylibs/easteregg.in.js?v=#{timestamp}')
       script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.min.js?v=#{timestamp}')
       // script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.inspector.js?v=#{timestamp}')
     - else
-      script(defer, src='/js/mylibs/easteregg.in.js')
+      script(src='/js/mylibs/easteregg.in.min.js')
       script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.min.js')
       // script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.inspector.js')
 
