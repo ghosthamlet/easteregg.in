@@ -112,7 +112,7 @@ exports.bootApplication = function(app, db) {
   //  (we're using port 6789 for production with apache mod_proxy for now)
   app.configure('production', function() {
     // ## Use express-uglify to minify JavaScript in production mode
-    app.use(require('express-uglify').middleware({ src: __dirname + '/public' }));
+    //app.use(require('express-uglify').middleware({ src: __dirname + '/public' }));
     cacheBusting = false;
     compress = true;
     linenos = false;
