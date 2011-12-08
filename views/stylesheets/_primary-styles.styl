@@ -1,0 +1,221 @@
+
+// # Primary Styles
+
+@import "_fonts"
+@import "_colors"
+
+body
+  // Dark Brick Wall by [Alex Parker](http//alexparker.me/)
+  background-image url('/img/dark_brick_wall.png')
+
+div#no-js
+  display none
+.no-js
+  div#no-js
+    display block
+
+#github-ribbon
+  position absolute
+  top 0
+  left 0
+  border 0
+
+div.fb-like
+  position absolute
+  top 22px
+  right 22px
+  border 0
+
+.twitter-share-button
+  position absolute
+  top 22px
+  right 88px
+  border 0
+
+#game-over
+  width 300px
+  height 250px
+  background-color hee
+
+h1
+h2
+h3
+h4
+  margin 0
+  padding 0
+
+#copyPaste
+  display block
+
+#ghLink a
+  text-decoration none
+
+#eggin
+  font-size 24px
+  height 48px
+  line-height 48px
+  text-align center
+  font-family "Mortal Kombat"
+  span
+    font-size 18px
+    background-color lui-kang
+    color white
+    font-family 'Courier New', Courier, monospace
+
+#upgradeMsg
+  h1
+    font-family "Mortal Kombat"
+    text-align center
+    text-transform uppercase
+    color hee
+    line-height 48px
+    font-size 36px
+    height 48px
+    width 900px
+    a
+      text-decoration none
+      img
+        width 32px
+        height 32px
+
+.mortal
+  font-size 24px
+  height 48px
+  line-height 48px
+  text-align center
+  font-family "Mortal Kombat"
+
+div#container
+  header
+    margin 0 auto
+    width 497px
+    height 182px
+    position relative
+    h1#logo
+      margin 0 auto
+      width 497px
+      height 182px
+      position absolute
+      background transparent url('/img/easteregg-in.png') no-repeat center
+  div#start_screen
+    margin 0 auto
+    margin-bottom 100px
+    width 600px
+    cursor pointer
+    text-transform uppercase
+    h2
+      text-align center
+      color white
+      font-family "Mortal Kombat"
+      text-shadow black 2px 0px 32px
+      font-size 64px
+      line-height 84px
+      height 168px
+  div#main
+    margin 0 auto
+    width 1050px
+    h2
+      text-transform uppercase
+      text-align center
+      color white
+      font-family "Mortal Kombat"
+      text-shadow black 2px 0px 32px
+      font-size 36px
+      line-height 62px
+      height 62px
+      float left
+      width 400px
+      margin-bottom 10px
+      &.last
+        width 600px
+        margin-left 50px
+    div#choose_your_trigger, div#choose_your_outcome
+      float left
+      margin-bottom 30px
+      box-shadow(1px 1px 20px black)
+      background-image url('/img/selection.png')
+      text-transform uppercase
+      div
+        float left
+        width 200px
+        height 100px
+        cursor pointer
+        &.no_background
+          background-image none
+        h3
+          height 100px
+          line-height 100px
+          font-size 30px
+          font-family "Mortal Kombat"
+          text-shadow black 0px 0px 15px
+          text-align center
+          color white
+          &.two_liner
+            margin-top 10px
+            margin-bottom 10px
+            line-height 40px
+            font-size 25px
+          &.reduced
+            font-size 24px
+    div#choose_your_trigger
+      margin-right 50px
+      width 400px
+      height 300px
+      div
+        &.selected
+          width 200px
+          height 100px
+          background url('/img/trigger.gif') 0 0
+    div#choose_your_outcome
+      width 600px
+      height 400px
+      div
+        &.selected
+          width 200px
+          height 100px
+          background url('/img/outcome.gif') 0 0
+    div#generate
+      clear both
+      height 88px
+      width 250px
+      margin 0 auto
+      button
+        text-transform uppercase
+        text-align center
+        color rojo
+        font-family "Mortal Kombat"
+        text-shadow black 2px 0px 44px
+        font-size 44px
+        line-height 88px
+        height 100%
+        width 100%
+        border-radius(10px)
+        background-color black
+  footer#footer
+    margin-top 40px
+    text-transform uppercase
+    display block
+    height 128px
+    h1
+      text-align center
+      color lui-kang
+      font-family "Mortal Kombat"
+      font-size 40px
+      line-height 80px
+      height 80px
+      text-shadow black 2px 0px 32px
+    p
+      text-align center
+      font-family "Mortal Kombat"
+      font-size 24px
+      line-height 48px
+      height 48px
+      text-transform uppercase
+      text-shadow black 2px 0px 32px
+      margin 0
+      padding 0
+      a
+        color fatality
+        text-decoration none
+
+@import "_fancybox"

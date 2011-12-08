@@ -1,0 +1,155 @@
+
+//- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+!!! 5
+//-  H5BP implementation inspired by <https://gist.github.com/888338/>.
+//if lt IE 7
+  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+//if IE 7
+  <html class="no-js lt-ie9 lt-ie8" lang="en">
+//if IE 8
+  <html class="no-js lt-ie9" lang="en">
+//[if gt IE 8]><!
+html(class='no-js', lang='en')
+  //<![endif]
+
+  //- Consider adding a manifest.appcache: h5bp.com/d/Offline
+  head
+    meta(charset='utf-8')
+    - if ('undefined' !== typeof title)
+      title #{title} - easteregg.in - where you go to get your website's easter eggs!
+    - else
+      title easteregg.in - where you go to get your website's easter eggs!
+    //- More info: h5bp.com/b/378
+    //- Meta Keywords
+    - if ('undefined' !== typeof keywords)
+      meta(name="keywords", content=keywords)
+    - else if ('undefined' !== typeof meta && 'undefined' !== typeof meta.keywords)
+      meta(name="keywords", content=meta.keywords)
+    - else
+      meta(name="keywords", content="easter eggs, website easter eggs, konami code, occupy internet, cornify, raptorize")
+    //- Meta Description
+    - if ('undefined' !== typeof description)
+      meta(name="description", content=meta.description)
+    - else if ('undefined' !== typeof meta && 'undefined' !== typeof meta.description)
+      meta(name="description", content=meta.description)
+    - else
+      meta(name="description", content="Choose your trigger and outcome to generate an easter egg you can copy/paste to your website.")
+    meta(name="author", content="Nick Baugh <http://niftylettuce.com/>")
+    //- Mobile viewport optimized: j.mp/bplateviewport
+    //meta(name='viewport', content='width=device-width,initial-scale=1')
+    //- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons
+    - timestamp = new Date().getTime();
+    - if (cacheBusting)
+      link(rel='stylesheet', href='/stylesheets/style.css?v=#{timestamp}')
+    - else
+      link(rel='stylesheet', href='/stylesheets/style.css')
+    //- More ideas for your <head> here: h5bp.com/d/head-Tips
+    //-.
+      All JavaScript at the bottom, except this Modernizr build incl. Respond.js
+      Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects;
+      for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/
+    script(src='/js/libs/modernizr-2.0.6.min.js')
+  body
+    #fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    .fb-like(data-href='http://www.facebook.com/eastereggin', data-send='false', data-layout='box_count', data-width='44', data-show-faces='false')
+    a(href='https://twitter.com/share', target="_blank", data-url='http://easteregg.in', data-text="where you go to get your website's easter eggs!", data-count='vertical', data-via='eastereggin', data-related="niftylettuce:creator of @eastereggin and @expressling").twitter-share-button Tweet
+    script(src='//platform.twitter.com/widgets.js')
+    a(href='https://github.com/niftylettuce/easteregg.in', target="_blank")
+      img(src='/img/github-ribbon.png', alt='Fork me on Github')#github-ribbon
+    #no-js
+      | Please
+      a(href='http://enable-javascript.com/', target="_blank") enable JavaScript
+      |  to view this website.
+    #container(role='main')
+      header
+        h1#logo.ir easteregg.in - where you go to get your website's easter eggs!
+      //- Dynamically load the body content with support for { layout: false }
+      //-  (e.g. index's route and view this through use of extends/inheritance)
+      block body
+        !=body
+      footer#footer
+        h1
+          | Credits:
+          span 7
+          p: a(href='https://twitter.com/niftylettuce', target='_blank')#niftylettuce by @niftylettuce
+    .hidden
+      #gongspector
+      #audioDing
+      #game-over
+        img(src='/img/game-over.png', alt='')
+        a(href='/'): img(src='/img/more-coins.png', alt='')
+        br
+        form(action='https://www.paypal.com/cgi-bin/webscr', method='post')
+          input(type='hidden', name='cmd', value='_s-xclick')
+          input(type='hidden', name='hosted_button_id', value='YXKU6AV52MH78')
+          input(type='hidden', name='page_style', value='eastereggin')
+          input(type='image', src='/img/give-coins.png', border='0', name='submit" alt="PayPal - The safer, easier way to pay online!')
+          img(src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', alt='', width='1', height='1').hidden
+    //- JavaScript at the bottom for fast page loading
+    //- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="/js/libs/jquery-1.7.0.min.js"><\\/script>')
+
+    script(src='/js/libs/jquery.fancybox-1.3.4.pack.min.js')
+    script(defer, src='/js/libs/beautify.min.js')
+
+    - if (cacheBusting)
+      script(defer, src='/js/mylibs/easteregg.in.js?v=#{timestamp}')
+      script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.min.js?v=#{timestamp}')
+      // script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.inspector.js?v=#{timestamp}')
+    - else
+      script(defer, src='/js/mylibs/easteregg.in.js')
+      script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.min.js')
+      // script(defer, src='/js/libs/jplayer/jquery.jplayer/jquery.jplayer.inspector.js')
+
+    //- Dynamically load your scripts here
+    //-  (e.g. index's route and view this through use of extends/inheritance)
+    block scripts
+
+    //-.
+      Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+      mathiasbynens.be/notes/async-analytics-snippet
+    script.
+      var _gaq=[['_setAccount','UA-26924161-1'],['_trackPageview'],['_trackPageLoadTime']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+
+    //- IE7.js <http://code.google.com/p/ie7-js/>
+    //-  Download the script then remove "//- " from the following 8 lines:
+    //- //if lt IE 7
+    //-   script.
+    //-     $(function() {
+    //-       Modernizr.load([{
+    //-         load: '/js/libs/IE7.js',
+    //-         complete: function() { $("#ajax-loader").fadeOut(); }
+    //-       }]);
+    //-     });
+
+    //- (AND/OR...)
+
+    //- IE6 Update <http://ie6update.com/>
+    //-  Inform user to upgrade their browser, you can turn this off if wanted.
+    //if lt IE 8
+      script.
+        var IE6UPDATE_OPTIONS = { icons_path: "ie6update/images/" };
+        $(function() { Modernizr.load([{load:'/ie6update/ie6update.js'}]); });
+
+    //- (AND/OR...)
+
+    //- Prompt IE6 users to install Chrome Frame, remove this you support IE6...
+    //-  <http://chromium.org/developers/how-tos/chrome-frame-getting-started>
+    //-  If you want to use, then remove "//- " from the following 4 lines:
+    //if lt IE 7
+      script(defer, src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js')
+      script(defer).
+        window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})

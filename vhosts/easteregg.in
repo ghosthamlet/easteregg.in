@@ -1,0 +1,12 @@
+<VirtualHost 74.207.230.207:80>
+  ServerAdmin      niftylettuce@gmail.com
+  ServerName       easteregg.in
+  ServerAlias      www.easteregg.in
+  ProxyRequests    on
+  ProxyPass        / http://74.207.230.207:6789/
+  ProxyPassReverse / http://74.207.230.207:6789/
+  <Proxy *>
+    Order deny,allow
+    Allow from all
+  </Proxy>
+</VirtualHost>

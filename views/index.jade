@@ -1,0 +1,29 @@
+extends layout
+
+block body
+  #start_screen
+    h2 Press enter or insert coins
+  #main.hidden
+    h2 Choose your trigger
+    h2.last Choose your outcome
+    #choose_your_trigger
+      .selected(title='konamiCode'): h3 Konami Code
+      div(title='doubleClickFooter'): h3.two_liner Double Click Footer
+      div(title='typeSomething'): h3.reduced Type Something
+      div(title='peelCorner'): h3 Peel Corner
+      div(title='dragLogo'): h3 Drag Logo
+      div(title='harmonyBg'): h3 Harmony Bg
+    #choose_your_outcome
+      .selected(title='cornify'): h3 Cornify
+      div(title='snowy'): h3 Snowy
+      div(title='invertColors'): h3.reduced Invert Colors
+      div(title='raptorize'): h3 Raptorize
+      div(title='katamari'): h3 Kathack
+      div(title='secretMsg'): h3 Secret Msg
+      div(title='asteroids'): h3 Asteroids
+      div(title='snake'): h3 Snake
+      div(title='niftylettuce'): h3 Nifty
+      div(title='unicornPooper'): h3.two_liner Unicorn<br />Pooper
+      div(title='occupyInternet'): h3.two_liner Occupy The Internet
+      #ghLink: a(href='https://github.com/niftylettuce/easteregg.in', target='_blank'): h3 ???
+    #generate: button Generate!

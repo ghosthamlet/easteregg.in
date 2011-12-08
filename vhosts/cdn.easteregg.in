@@ -1,0 +1,6 @@
+<VirtualHost 74.207.230.207:80>
+  ServerAdmin  niftylettuce@gmail.com
+  ServerName   cdn.easteregg.in
+  ServerAlias  www.cdn.easteregg.in
+  Redirect     301 / http://easteregg.in/
+</VirtualHost>

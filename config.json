@@ -1,0 +1,11 @@
+{
+  "development": {
+    "port": 8080
+  },
+  "staging": {
+    "port": 8081
+  },
+  "production": {
+    "port": 6789
+  }
+}

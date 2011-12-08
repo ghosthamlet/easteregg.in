@@ -1,0 +1,30 @@
+{
+    "private": true
+  , "name": "easteregg.in"
+  , "description": "where you go to get your website's easter eggs!"
+  , "version": "0.0.1"
+  , "author": "Nick Baugh <niftylettuce@gmail.com>"
+  , "keywords": [
+        "easter"
+      , "eggs"
+    ]
+  , "dependencies": {
+        "express"          : ">= 2.4.6"
+      , "stylus"           : ">= 0.0.1"
+      , "nib"              : ">= 0.2.0"
+      , "jade"             : ">= 0.0.1"
+      , "colors"           : ">= 0.5.0"
+      , "gzippo"           : ">= 0.0.4"
+      , "commander"        : ">= 0.1.0"
+      , "underscore"       : ">= 1.1.7"
+      , "gzippo"           : ">= 0.1.0"
+      , "walk"             : ">= 2.0.2"
+      , "express-uglify"   : "https://github.com/niftylettuce/express-uglify/tarball/master"
+    }
+  , "main": "./server.js"
+  , "engines": { "node": ">= 0.6.3" }
+  , "repository": {
+        "type": "git"
+      , "url": "git://github.com/niftylettuce/easteregg.in.git"
+    }
+}
