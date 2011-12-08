@@ -224,7 +224,7 @@ var fatalities = {
         snowy: {
           audio: "snowy",
           // http://paulirish.com/js/snow.js
-          path: "http://cdn.easteregg.in/outcomes/snowy/snow.js",
+          path: "http://cdn.easteregg.in/outcomes/snowy/snow.min.js",
           fx: function() {
             var link = $("<link>");
             link.attr({
@@ -269,7 +269,7 @@ var fatalities = {
         secretMsg: {
           audio: "secretmessage",
           // Can't use $.getScript here because of cache interrupt w/YUI combo
-          path: "http://cdn.easteregg.in/null.js", // TODO: We need an override here
+          path: "http://cdn.easteregg.in/null.min.js", // TODO: We need an override here
           fx: function() {
             $.ajax({
               type: "GET",
@@ -328,7 +328,7 @@ var fatalities = {
         // **occupyInternet**
         occupyInternet: {
           audio: "occupy-internet",
-          path: "http://cdn.easteregg.in/null.js",
+          path: "http://cdn.easteregg.in/null.min.js",
           fx: function() {
             // http://occupyinter.net/embed.json?callback=_ee_occupy
             $.getScript("http://occupyinter.net/embed.json?callback=_ee_occupy");
