@@ -1103,7 +1103,7 @@ $(function() {
                     ev.preventDefault();
                     msg = $(this).find("input").val();
                     $.fancybox({
-                      content: '<h3 class="mortal">DOUBLE CLICK THE FOOTER!</h3>' + txt,
+                      content: '<h3 class="mortal">DOUBLE CLICK "CREDITS" IN OUR SITE\'S FOOTER!</h3>' + txt,
                       onComplete: function() {
                         generate(stringalities.triggers.doubleClickFooter(fatalities.outcomes.secretMsg.path, fatalities.outcomes.secretMsg.fx));
                         fatalities.triggers.doubleClickFooter.run(fatalities.outcomes.secretMsg.path, fatalities.outcomes.secretMsg.fx);
@@ -1116,7 +1116,7 @@ $(function() {
             default:
               runAudio(fatalities.triggers.doubleClickFooter.audio, fatalities.outcomes[outcome].audio);
               $.fancybox({
-                content: '<h3 class="mortal">DOUBLE CLICK THE FOOTER!</h3>' + txt,
+                content: '<h3 class="mortal">DOUBLE CLICK "CREDITS" IN OUR SITE\'S FOOTER!</h3>' + txt,
                 onComplete: function() {
                   fatalities.triggers.doubleClickFooter.run(fatalities.outcomes[outcome].path, fatalities.outcomes[outcome].fx);
                   generate(stringalities.triggers.doubleClickFooter(fatalities.outcomes[outcome].path, fatalities.outcomes[outcome].fx));
