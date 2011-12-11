@@ -26,6 +26,7 @@ var fatalities = {
         konamiCode: {
           audio: "konamicode",
           run: function(path, fx) {
+            $(document).unbind('keydown');
             var konami_keys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
                 konami_index = 0,
                 unicorn = konamiCheck(path, fx, false),
