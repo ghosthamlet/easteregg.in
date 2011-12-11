@@ -369,7 +369,9 @@ var fatalities = {
     // Generated notice in all scripts
     notice = '<!-- easteregg.in - where you go to get your website\'s easter eggs -->\n',
     // Start of the script tag
-    scriptTop = '<script type="text/javascript">\n(function(window, undefined){\n',
+    scriptTop = ''
+      + '<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>\n'
+      + '<script type="text/javascript">\n(function(window, undefined){\n',
     // End of the script tag
     scriptBottom = '\n})(this);\n</script>',
     // Joins together an array with a linebreak
